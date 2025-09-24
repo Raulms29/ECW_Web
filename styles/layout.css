@@ -1,0 +1,44 @@
+body>header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body>header h1 {
+    margin-right: 0.8em;
+    margin-left: 0.25em;
+}
+
+@media screen and (max-width: 1150px) {
+
+    body>header {
+        gap: 0em;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}

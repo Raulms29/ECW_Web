@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    text-align: justify;
+    color: #000000;
+    background-color: #f0f4f5;
+}
+
+
+header {
+    color: #f0f4f5;
+    background-color: #3a3a3a;
+    border-bottom: 3px solid #ef8354;
+    border-radius: 0.5rem;
+}
+
+body>header h1 {
+    font-size: 2.5rem;
+}
+
+footer {
+    color: #f0f4f5;
+    background-color: #3a3a3a;
+    border-top: 3px solid #ef8354;
+    border-radius: 0.5rem;
+}
+
+footer p {
+    margin: 0.5em;
+}
+
+h2 {
+    color: #3a3a3a;
+    font-size: 2.3rem;
+    border-left: 4px solid #ef8354;
+    padding-left: 0.25em;
+}
+
+h3 {
+    color: #3a3a3a;
+    font-size: 1.5em;
+    border-left: 3px solid #ef8354;
+    margin-left: 0.25em;
+    padding-left: 0.25em;
+}
+
+body>header nav a {
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: #f0f4f5;
+    padding: 0.25em 0.25em;
+    /* border-radius: 3px; */
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Especificidad: 014*/
+body>header nav a:visited {
+    color: #f0f4f5;
+}
+
+body>header nav a:hover {
+    font-weight: 500;
+    font-size: 1.45em;
+    background: #d46a1c;
+    color: #fff;
+    border-radius: 3px;
+}
+
+ul ul {
+    list-style-type: square;
+}
+
+video {
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    max-height: 70%;
+}
+
+audio {
+    max-width: 100%;
+}

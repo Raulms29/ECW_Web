@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raúl Mera Soto">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <meta name="keywords" content="Afición, Raúl Mera Soto">
+</head>
+
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+        <nav>
+            <a href="index.html">Información Personal</a>
+            <a href="aficiones.html">Aficiones</a>
+            <a href="proyectos.html">Proyectos</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Aficiones</h2>
+        <ul>
+            <li>Cine y series de televisión</li>
+            <li>Fútbol</li>
+            <li>Videojuegos
+                <ul>
+                    <li>Red Dead Redemption 2 </li>
+                    <li>Hollow Knight: Silksong</li>
+                    <li>Celeste</li>
+                </ul>
+            </li>
+            <li>Senderismo</li>
+            <li>Pesca</li>
+        </ul>
+
+        <p>Banda sonora del videojuego Celeste</p>
+
+        <audio controls="">
+            <source src="multimedia/audio/celeste_soundtrack_03_resurrections.mp3" type="audio/mpeg">
+            <source src="multimedia/audio/celeste_soundtrack_03_resurrections.wav" type="audio/wav">
+        </audio>
+
+        <h3>Grupos y Cantantes Favoritos</h3>
+        <ol>
+            <li>Imagine Dragons</li>
+            <li>Pablo Alborán</li>
+            <li>Stromae</li>
+            <li>Lukas Graham</li>
+            <li>Avicii</li>
+        </ol>
+
+        <section>
+            <!-- Originalmente era un aside ya que no se encuentra estrictamente relacionado con el resto del contenido -->
+            <h3>Otras Actividades</h3>
+            <p>Una reacción de precipitación que realicé en el instituto. En ella reaccionan yoduro de potasio y nitrato
+                de plomo para formar nitrato de potasio y yoduro de plomo, siendo el segundo el que le da su
+                característico color al compuesto resultante.</p>
+
+            <video controls="" preload="auto">
+                <source src="multimedia/video/reaccion_precipitacion.mp4" type="video/mp4">
+                <source src="multimedia/video/reaccion_precipitacion.webm" type="video/webm">
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025-2026 Raúl Mera Soto</p>
+    </footer>
+</body>
+
+</html>

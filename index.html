@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raúl Mera Soto">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <meta name="keywords" content="Yo, Raúl Mera Soto">
+</head>
+
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+        <nav>
+            <a href="index.html">Información Personal</a>
+            <a href="aficiones.html">Aficiones</a>
+            <a href="proyectos.html">Proyectos</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Información Personal</h2>
+        <p>Nombre: Raúl Mera Soto</p>
+        <p>Correo Electrónico: <a href=" mailto:UO287827@uniovi.es">
+                UO287827@uniovi.es</a></p>
+
+        <picture>
+            <source media="(max-width: 465px)" srcset="multimedia/img/retrato150.jpg">
+            <source media="(max-width: 799px)" srcset="multimedia/img/retrato200.jpg">
+            <source media="(min-width: 800px)" srcset="multimedia/img/retrato300.jpg">
+            <img src="multimedia/img/retrato300.jpg" alt="Mi retrato">
+        </picture>
+
+        <p>Una foto de mi pueblo nevado</p>
+
+        <picture>
+            <source media="(max-width: 465px)" srcset="multimedia/img/snow-town250.jpg">
+            <source media="(max-width: 799px)" srcset="multimedia/img/snow-town350.jpg">
+            <source media="(min-width: 800px)" srcset="multimedia/img/snow-town450.jpg">
+            <img src="multimedia/img/snow-town450.jpg" alt="Pueblo nevado">
+        </picture>
+    </main>
+
+    <footer>
+        <p>© 2025-2026 Raúl Mera Soto</p>
+    </footer>
+</body>
+
+</html>
