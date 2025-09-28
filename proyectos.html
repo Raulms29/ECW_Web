@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <meta name="keywords" content="Proyecto, Raúl Mera Soto">
+    <script src="js/time.js"></script>
 </head>
 
 <body>
@@ -38,6 +39,11 @@
     <footer>
         <p>© 2025-2026 Raúl Mera Soto</p>
     </footer>
+    <script>
+        const time = new Hora();
+        const footer = document.querySelector('footer');
+        footer.insertAdjacentHTML('beforeend', `<p>Fecha : ${time.getFecha()}</p>`);
+    </script>
 </body>
 
 </html>

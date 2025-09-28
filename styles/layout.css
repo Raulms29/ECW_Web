@@ -2,15 +2,12 @@ body>header {
     display: flex;
     align-items: center;
     justify-content: left;
-    flex-wrap: wrap;
     flex-direction: row;
-    gap: 1em;
+    flex-wrap: wrap;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    gap: 1em;
     margin-bottom: 0.5rem;
 }
 
@@ -28,17 +25,21 @@ body>header h1 {
 @media screen and (max-width: 1150px) {
 
     body>header {
+        /* Redefinición de gap */
         gap: 0em;
+        /* Redefinición de justify-content */
         justify-content: center;
+        /* Redefinición de flex-direction */
         flex-direction: column;
     }
 
     nav {
-        display: flex;
         flex-flow: row;
         align-items: center;
         justify-content: center;
+        /* Redefinición de flex-wrap */
         flex-wrap: wrap;
+        /* Redefinición de flex-direction */
         flex-direction: column;
     }
 }

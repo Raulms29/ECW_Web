@@ -29,6 +29,7 @@ footer p {
 }
 
 h2 {
+    /*Hereda  background-color de body #f0f4f5*/
     color: #3a3a3a;
     font-size: 2.3rem;
     border-left: 4px solid #ef8354;
@@ -36,6 +37,7 @@ h2 {
 }
 
 h3 {
+    /*Hereda  background-color de body #f0f4f5*/
     color: #3a3a3a;
     font-size: 1.5em;
     border-left: 3px solid #ef8354;
@@ -47,6 +49,7 @@ body>header nav a {
     font-size: 1.5em;
     text-align: center;
     text-decoration: none;
+    /*Hereda  background-color de body #f0f4f5*/
     color: #f0f4f5;
     padding: 0.25em 0.25em;
     /* border-radius: 3px; */
@@ -55,6 +58,7 @@ body>header nav a {
 
 /* Especificidad: 014*/
 body>header nav a:visited {
+    /*Hereda  background-color de body #f0f4f5*/
     color: #f0f4f5;
 }
 
