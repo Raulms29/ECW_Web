@@ -1,0 +1,3 @@
+# Trabajo I: Sitio Web Personal
+Para poder interactuar con esta web no se necesita ningún paso previo, simplemente abrir el archivo `index.html` en el navegador.
+En este proyecto, se hace el uso de Temporal para indicar la hora actual, aunque solo en Firefox, ya que es el único navegador que soporta esta API en el momento de la creación de este proyecto. En otros navegadores, se usa Date en su lugar.

@@ -1,3 +1,4 @@
+/* Especificidad 001 */
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     text-align: justify;
@@ -5,7 +6,7 @@ body {
     background-color: #f0f4f5;
 }
 
-
+/* Especificidad 001 */
 header {
     color: #f0f4f5;
     background-color: #3a3a3a;
@@ -13,10 +14,12 @@ header {
     border-radius: 0.5rem;
 }
 
+/* Especificidad 003 */
 body>header h1 {
     font-size: 2.5rem;
 }
 
+/* Especificidad 001 */
 footer {
     color: #f0f4f5;
     background-color: #3a3a3a;
@@ -24,10 +27,12 @@ footer {
     border-radius: 0.5rem;
 }
 
+/* Especificidad 002 */
 footer p {
     margin: 0.5em;
 }
 
+/* Especificidad 001 */
 h2 {
     /*Hereda  background-color de body #f0f4f5*/
     color: #3a3a3a;
@@ -36,6 +41,7 @@ h2 {
     padding-left: 0.25em;
 }
 
+/* Especificidad 001 */
 h3 {
     /*Hereda  background-color de body #f0f4f5*/
     color: #3a3a3a;
@@ -45,6 +51,7 @@ h3 {
     padding-left: 0.25em;
 }
 
+/* Especificidad 004 */
 body>header nav a {
     font-size: 1.5em;
     text-align: center;
@@ -52,7 +59,6 @@ body>header nav a {
     /*Hereda  background-color de body #f0f4f5*/
     color: #f0f4f5;
     padding: 0.25em 0.25em;
-    /* border-radius: 3px; */
     transition: background 0.3s, color 0.3s;
 }
 
@@ -62,6 +68,7 @@ body>header nav a:visited {
     color: #f0f4f5;
 }
 
+/* Especificidad: 014*/
 body>header nav a:hover {
     font-weight: 500;
     font-size: 1.45em;
@@ -70,10 +77,12 @@ body>header nav a:hover {
     border-radius: 3px;
 }
 
+/* Especificidad: 002*/
 ul ul {
     list-style-type: square;
 }
 
+/* Especificidad: 001*/
 video {
     max-width: 80%;
     height: auto;
@@ -81,6 +90,7 @@ video {
     max-height: 70%;
 }
 
+/* Especificidad: 001*/
 audio {
     max-width: 100%;
 }

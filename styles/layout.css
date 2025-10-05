@@ -1,3 +1,4 @@
+/* Especificidad 002 */
 body>header {
     display: flex;
     align-items: center;
@@ -6,17 +7,21 @@ body>header {
     flex-wrap: wrap;
 }
 
+/* Especificidad 001 */
 nav {
     display: flex;
     margin-bottom: 0.5rem;
 }
 
+
+/* Especificidad 001 */
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Especificidad 003 */
 body>header h1 {
     margin-right: 0.8em;
     margin-left: 0.25em;
@@ -24,8 +29,8 @@ body>header h1 {
 
 @media screen and (max-width: 1150px) {
 
+    /* Especificidad 002 */
     body>header {
-        /* Redefinición de gap */
         gap: 0em;
         /* Redefinición de justify-content */
         justify-content: center;
@@ -33,6 +38,7 @@ body>header h1 {
         flex-direction: column;
     }
 
+    /* Especificidad 002 */
     nav {
         flex-flow: row;
         align-items: center;

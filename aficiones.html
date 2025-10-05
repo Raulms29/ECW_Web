@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <meta name="keywords" content="Afición, Raúl Mera Soto">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/time.js"></script>
 </head>
 
@@ -54,7 +56,6 @@
         </ol>
 
         <section>
-            <!-- Originalmente era un aside ya que no se encuentra estrictamente relacionado con el resto del contenido -->
             <h3>Otras Actividades</h3>
             <p>Una reacción de precipitación que realicé en el instituto. En ella reaccionan yoduro de potasio y nitrato
                 de plomo para formar nitrato de potasio y yoduro de plomo, siendo el segundo el que le da su
@@ -68,13 +69,8 @@
     </main>
 
     <footer>
-        <p>© 2025-2026 Raúl Mera Soto</p>
+        <p>© 2025 Raúl Mera Soto</p>
     </footer>
-    <script>
-        const time = new Hora();
-        const footer = document.querySelector('footer');
-        footer.insertAdjacentHTML('beforeend', `<p>Fecha : ${time.getFecha()}</p>`);
-    </script>
 </body>
 
 </html>
