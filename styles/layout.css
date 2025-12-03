@@ -1,3 +1,11 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 8px;
+}
+
 /* Especificidad 002 */
 body>header {
     display: flex;
