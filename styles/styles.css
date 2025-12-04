@@ -1,95 +1,266 @@
-/* Especificidad 001 */
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #000000;
-    background-color: #f0f4f5;
+/* Variables CSS para colores */
+:root {
+    --color-primary: #1a73e8;
+    --color-primary-dark: #0d5bbd;
+    --color-text: #2c3e50;
+    --color-text-light: #5f6368;
+    --color-background: #ffffff;
+    --color-background-light: #f8f9fa;
+    --color-border: #d0d0d0;
+    --color-hover: #e8f0fe;
 }
 
 /* Especificidad 001 */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* Hay un color de fondo establecido y no hay color de primer plano */
+    /* CSS variable: no comprobaciÃ³n estÃ¡tica */
+    color: var(--color-text);
+    /* CSS variable: no comprobaciÃ³n estÃ¡tica */
+    background-color: var(--color-background);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Especificidad: 001 */
 header {
-    color: #f0f4f5;
-    background-color: #3a3a3a;
-    border-bottom: 3px solid #ef8354;
-    border-radius: 0.5rem;
+    /* Hereda color de body */
+    background-color: var(--color-background-light);
+    border-bottom: 1px solid var(--color-border);
 }
 
 /* Especificidad 003 */
 body>header h1 {
     font-size: 2.5rem;
+    /* Hereda background-color de header */
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Especificidad: 004 */
+body>header h1 a {
+    /* Hereda background-color de h1 */
+    color: var(--color-primary);
+    transition: color 0.2s ease;
+}
+
+/* Especificidad: 004 */
+body>header h1 a:hover {
+    /* Hereda background-color de h1 */
+    color: var(--color-primary-dark);
+}
+
+/* Especificidad: 004 */
+body>header h1 a:visited {
+    /* Hereda background-color de h1 */
+    color: var(--color-primary);
 }
 
 /* Especificidad 001 */
 footer {
-    color: #f0f4f5;
-    background-color: #3a3a3a;
-    border-top: 3px solid #ef8354;
-    border-radius: 0.5rem;
+    color: var(--color-text-light);
+    background-color: var(--color-background-light);
+    border-top: 1px solid var(--color-border);
 }
 
 /* Especificidad 002 */
 footer p {
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 /* Especificidad 001 */
 h2 {
-    /*Hereda  background-color de body #f0f4f5*/
-    color: #3a3a3a;
+    /* Hereda background-color de body */
+    color: var(--color-primary);
     font-size: 2.3rem;
-    border-left: 4px solid #ef8354;
-    padding-left: 0.25em;
+    font-weight: 600;
+    margin: 0.5rem 0 1rem 0;
 }
 
 /* Especificidad 001 */
 h3 {
-    /*Hereda  background-color de body #f0f4f5*/
-    color: #3a3a3a;
-    font-size: 1.5em;
-    border-left: 3px solid #ef8354;
-    margin-left: 0.25em;
-    padding-left: 0.25em;
-}
-
-/* Especificidad 004 */
-body>header nav a {
-    font-size: 1.5em;
-    text-align: center;
-    text-decoration: none;
-    /*Hereda  background-color de body #f0f4f5*/
-    color: #f0f4f5;
-    padding: 0.25em 0.25em;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* Especificidad: 014*/
-body>header nav a:visited {
-    /*Hereda  background-color de body #f0f4f5*/
-    color: #f0f4f5;
-}
-
-/* Especificidad: 014*/
-body>header nav a:hover {
+    /* Hereda background-color de body */
+    color: var(--color-primary);
+    font-size: 1.5rem;
     font-weight: 500;
-    font-size: 1.45em;
-    background: #d46a1c;
-    color: #fff;
-    border-radius: 3px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Especificidad: 002*/
+/* Especificidad 001 */
+h4 {
+    /* Hereda background-color de body */
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Especificidad 003 */
+section article p {
+    margin: 0.25rem 0;
+}
+
+/* Especificidad: 004 */
+body>header nav a {
+    font-size: 1.5rem;
+    /* Hereda background-color de header */
+    color: var(--color-text-light);
+    padding: 0 1rem;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 0.5rem;
+}
+
+/* Especificidad: 004 */
+body>header nav a:visited {
+    /* Hereda background-color de header */
+    color: var(--color-text-light);
+}
+
+/* Especificidad: 004 */
+body>header nav a:hover {
+    /* Hereda background-color de header */
+    background-color: var(--color-hover);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* Especificidad: 004 */
+body>header nav a[aria-current="page"] {
+    /* Hereda background-color de header */
+    color: var(--color-primary);
+}
+
+/* Especificidad: 001 */
+a {
+    text-decoration: none;
+    /* Hereda background-color de body */
+    color: var(--color-text-light);
+    transition: color 0.2s ease;
+}
+
+/* Especificidad: 001 */
+a:visited {
+    /* Hereda background-color de body */
+    color: var(--color-text-light);
+}
+
+/* Especificidad: 001 */
+a:hover {
+    /* Hereda background-color de body */
+    color: var(--color-primary);
+}
+
+/* Especificidad: 002 */
 ul ul {
     list-style-type: square;
 }
 
-/* Especificidad: 001*/
+/* Especificidad: 001 */
+img {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Especificidad: 001 */
 video {
     max-width: 80%;
-    height: auto;
-    width: auto;
     max-height: 70%;
 }
 
-/* Especificidad: 001*/
+/* Especificidad: 001 */
 audio {
     max-width: 100%;
+}
+
+/* Especificidad: 003 */
+main>picture img {
+    max-width: 250px;
+}
+
+/* Especificidad: 004 */
+main>section>picture img {
+    max-width: 250px;
+}
+
+/* Especificidad: 005 */
+main>section>aside>picture img {
+    max-width: 250px;
+}
+
+/* Especificidad: 002 */
+main>h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* Especificidad: 003 */
+main>article h3 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    font-size: 1.8rem;
+}
+
+/* Especificidad: 003 */
+main>article>p {
+    margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Especificidad: 002 */
+main>h3+p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Especificidad: 004 */
+main>article>p svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--color-text-light);
+}
+
+/* Especificidad: 003 */
+main>p svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--color-text-light);
+}
+
+/* Especificidad: 005 */
+main>article>p a svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: currentColor;
+}
+
+/* Especificidad: 004 */
+main>p a svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: currentColor;
+}
+
+/* Especificidad: 004*/
+main>section>p a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Especificidad: 005 */
+main>section>p a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
 }

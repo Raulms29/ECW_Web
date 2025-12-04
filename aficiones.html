@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Raúl Mera Soto">
-    <title>Mi Página Web</title>
+    <meta name="description"
+        content="Aficiones e intereses de Raúl Mera Soto, incluyendo cine, videojuegos, música y actividades.">
+    <title>Raúl Mera Soto - Aficiones</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="icon" href="multimedia/img/favicon.ico">
     <meta name="keywords" content="Afición, Raúl Mera Soto">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/time.js"></script>
-    <script src="https://t.contentsquare.net/uxa/0feb18928ec09.js"></script>
-    <script type="text/javascript">
+    <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
@@ -25,44 +24,56 @@
 
 <body>
     <header>
-        <h1>Mi Página Web</h1>
-        <nav>
-            <a href="index.html">Información Personal</a>
-            <a href="aficiones.html">Aficiones</a>
+        <h1><a href="index.html">Raúl Mera Soto</a></h1>
+        <nav aria-label="Navegación principal">
+            <a href="sobre-mi.html">Sobre Mí</a>
+            <a href="aficiones.html" aria-current="page">Aficiones</a>
             <a href="proyectos.html">Proyectos</a>
         </nav>
     </header>
     <main>
         <h2>Aficiones</h2>
-        <ul>
-            <li>Cine y series de televisión</li>
-            <li>Fútbol</li>
-            <li>Videojuegos
-                <ul>
-                    <li>Red Dead Redemption 2 </li>
-                    <li>Hollow Knight: Silksong</li>
-                    <li>Celeste</li>
-                </ul>
-            </li>
-            <li>Senderismo</li>
-            <li>Pesca</li>
-        </ul>
 
-        <p>Banda sonora del videojuego Celeste</p>
+        <section>
+            <h3>Entretenimiento</h3>
+            <ul>
+                <li>Cine y series de televisión</li>
+                <li>Fútbol</li>
+                <li>Videojuegos favoritos:
+                    <ul>
+                        <li>Red Dead Redemption 2</li>
+                        <li>Hollow Knight: Silksong</li>
+                        <li>Celeste</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        <audio controls="">
-            <source src="multimedia/audio/celeste_soundtrack_03_resurrections.mp3" type="audio/mpeg">
-            <source src="multimedia/audio/celeste_soundtrack_03_resurrections.wav" type="audio/wav">
-        </audio>
+        <section>
+            <h3>Actividades al Aire Libre</h3>
+            <ul>
+                <li>Senderismo</li>
+                <li>Pesca</li>
+            </ul>
+        </section>
 
-        <h3>Grupos y Cantantes Favoritos</h3>
-        <ol>
-            <li>Imagine Dragons</li>
-            <li>Pablo Alborán</li>
-            <li>Stromae</li>
-            <li>Lukas Graham</li>
-            <li>Avicii</li>
-        </ol>
+        <section>
+            <h3>Música</h3>
+            <p>Banda sonora del videojuego Celeste</p>
+            <audio controls>
+                <source src="multimedia/audio/celeste_soundtrack_03_resurrections.mp3" type="audio/mpeg">
+                <source src="multimedia/audio/celeste_soundtrack_03_resurrections.wav" type="audio/wav">
+            </audio>
+
+            <p>Grupos y Cantantes Favoritos</p>
+            <ol>
+                <li>Imagine Dragons</li>
+                <li>Pablo Alborán</li>
+                <li>Stromae</li>
+                <li>Lukas Graham</li>
+                <li>Avicii</li>
+            </ol>
+        </section>
 
         <section>
             <h3>Otras Actividades</h3>
@@ -70,7 +81,7 @@
                 de plomo para formar nitrato de potasio y yoduro de plomo, siendo el segundo el que le da su
                 característico color al compuesto resultante.</p>
 
-            <video controls="" preload="auto">
+            <video controls preload="auto">
                 <source src="multimedia/video/reaccion_precipitacion.mp4" type="video/mp4">
                 <source src="multimedia/video/reaccion_precipitacion.webm" type="video/webm">
             </video>
