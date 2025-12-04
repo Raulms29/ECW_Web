@@ -21,11 +21,11 @@ class Clock {
         let paragraphs = footer.querySelectorAll('p');
         let clockElem;
 
-        if (paragraphs.length < 2) {
+        if (paragraphs.length < 3) {
             clockElem = document.createElement('p');
             footer.appendChild(clockElem);
         } else {
-            clockElem = paragraphs[1];
+            clockElem = paragraphs[2];
         }
 
         if (clockElem.textContent !== timeString) {
@@ -33,8 +33,22 @@ class Clock {
         }
     }
 
+    addLastModified() {
+        const footer = document.querySelector('footer');
+        const lastModifiedElem = document.createElement('p');
+        const lastModified = new Date(document.lastModified);
+        const formattedDate = lastModified.toLocaleDateString(navigator.language, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        lastModifiedElem.textContent = `Última actualización: ${formattedDate}`;
+        footer.appendChild(lastModifiedElem);
+    }
+
     init() {
         window.addEventListener('DOMContentLoaded', () => {
+            this.addLastModified();
             this.updateClock();
             setInterval(() => this.updateClock(), 100);
         });
