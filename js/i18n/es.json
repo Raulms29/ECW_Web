@@ -110,12 +110,6 @@
   "sitemap": {
     "title": "Mapa del Sitio",
     "heading": "Mapa del Sitio",
-    "homeDescription": "Página principal con información de contacto y enlaces a redes sociales.",
-    "aboutDescription": "Información personal, formación académica y experiencia profesional.",
-    "hobbiesDescription": "Mis intereses personales, hobbies y actividades favoritas.",
-    "projectsDescription": "Proyectos de desarrollo de software realizados durante el grado.",
-    "helpDescription": "Guía de navegación y descripción de las secciones del sitio.",
-    "sitemapDescription": "Esta página con la estructura completa del sitio web."
   },
   "search": {
     "placeholder": "Buscar...",

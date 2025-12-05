@@ -110,12 +110,6 @@
   "sitemap": {
     "title": "Site Map",
     "heading": "Site Map",
-    "homeDescription": "Main page with contact information and social media links.",
-    "aboutDescription": "Personal information, academic background and professional experience.",
-    "hobbiesDescription": "My personal interests, hobbies and favorite activities.",
-    "projectsDescription": "Software development projects completed during the degree.",
-    "helpDescription": "Navigation guide and description of the site sections.",
-    "sitemapDescription": "This page with the complete structure of the website."
   },
   "search": {
     "placeholder": "Search...",
