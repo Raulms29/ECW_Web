@@ -179,7 +179,7 @@
         ]
     },
     "ayuda.html": {
-        "title": "help.title",
+        "title": "nav.help",
         "sections": [
             {
                 "id": "inicio",
