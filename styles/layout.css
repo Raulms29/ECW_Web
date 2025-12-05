@@ -24,7 +24,9 @@ nav {
 footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 /* Especificidad 003 */
@@ -32,7 +34,7 @@ body>header h1 {
     margin: 0 0.8em 0 0.25em;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
 
     /* Especificidad 002 */
     body>header {

@@ -14,9 +14,9 @@
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     /* Hay un color de fondo establecido y no hay color de primer plano */
-    /* CSS variable: no comprobaciÃ³n estÃ¡tica */
+    /* CSS variable: no comprobación estática */
     color: var(--color-text);
-    /* CSS variable: no comprobaciÃ³n estÃ¡tica */
+    /* CSS variable: no comprobación estática */
     background-color: var(--color-background);
     line-height: 1.6;
     display: flex;
@@ -63,11 +63,17 @@ footer {
     color: var(--color-text-light);
     background-color: var(--color-background-light);
     border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
 }
 
 /* Especificidad 002 */
 footer p {
-    margin: 0.5rem;
+    margin: 0.25rem 0.5rem;
+}
+
+/* Especificidad 002 */
+footer select {
+    margin: 0.25rem 0.5rem;
 }
 
 /* Especificidad 001 */
@@ -85,8 +91,8 @@ h3 {
     color: var(--color-primary);
     font-size: 1.5rem;
     font-weight: 500;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
 }
 
 /* Especificidad 001 */
@@ -95,8 +101,8 @@ h4 {
     color: var(--color-text);
     font-size: 1.2rem;
     font-weight: 500;
-    margin-top: 0.5rem;
-    margin-bottom: 0.25rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.2rem;
 }
 
 /* Especificidad 003 */
@@ -196,7 +202,8 @@ main>section>aside>picture img {
 /* Especificidad: 002 */
 main>h2 {
     font-size: 2.3rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
     width: 100%;
 }
 
@@ -263,4 +270,40 @@ main>section>p a svg {
     width: 1.5rem;
     height: 1.5rem;
     fill: currentColor;
+}
+
+/* Estilos para migas de pan */
+/* Especificidad: 011 */
+body>nav[aria-label="Migas de pan"] {
+    margin: 0.5rem;
+}
+
+/* Especificidad: 012 */
+body>nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Especificidad: 013 */
+body>nav ol li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.5rem;
+    /* Hereda background-color de body */
+    color: var(--color-text-light);
+}
+
+/* Especificidad: 014 */
+body>nav ol li a {
+    /* Hereda background-color de body */
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Especificidad: 014 */
+body>nav ol li a:hover {
+    text-decoration: underline;
 }

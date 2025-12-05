@@ -1,0 +1,218 @@
+{
+    "index.html": {
+        "title": "nav.home",
+        "sections": [
+            {
+                "id": "contacto",
+                "title": "index.contact",
+                "keys": [
+                    "index.contact",
+                    "aboutMe.email",
+                    "aboutMe.emailValue"
+                ]
+            },
+            {
+                "id": "redes-sociales",
+                "title": "index.socialNetworks",
+                "keys": [
+                    "index.socialNetworks",
+                    "aboutMe.github",
+                    "aboutMe.linkedin"
+                ]
+            }
+        ]
+    },
+    "sobre-mi.html": {
+        "title": "nav.about",
+        "sections": [
+            {
+                "id": "informacion-personal",
+                "title": "aboutMe.personalInfo",
+                "keys": [
+                    "aboutMe.personalInfo",
+                    "aboutMe.name",
+                    "aboutMe.nameValue",
+                    "aboutMe.email",
+                    "aboutMe.emailValue"
+                ]
+            },
+            {
+                "id": "educacion",
+                "title": "aboutMe.education",
+                "keys": [
+                    "aboutMe.education",
+                    "aboutMe.education1Title",
+                    "aboutMe.education1Period",
+                    "aboutMe.education1School",
+                    "aboutMe.education2Title",
+                    "aboutMe.education2Period",
+                    "aboutMe.education2Status",
+                    "aboutMe.education2School"
+                ]
+            },
+            {
+                "id": "experiencia",
+                "title": "aboutMe.experience",
+                "keys": [
+                    "aboutMe.experience",
+                    "aboutMe.experience1Title",
+                    "aboutMe.experience1Period",
+                    "aboutMe.experience1Tasks",
+                    "aboutMe.experience1Task1",
+                    "aboutMe.experience1Task2"
+                ]
+            },
+            {
+                "id": "referencias",
+                "title": "aboutMe.references",
+                "keys": [
+                    "aboutMe.references",
+                    "aboutMe.references1Name",
+                    "aboutMe.references1Title",
+                    "aboutMe.references1Contact"
+                ]
+            },
+            {
+                "id": "fotos",
+                "title": "aboutMe.photos",
+                "keys": [
+                    "aboutMe.photos",
+                    "aboutMe.photoAlt1",
+                    "aboutMe.photoCaption2",
+                    "aboutMe.photoAlt2"
+                ]
+            }
+        ]
+    },
+    "aficiones.html": {
+        "title": "nav.hobbies",
+        "sections": [
+            {
+                "id": "entretenimiento",
+                "title": "hobbies.entertainment",
+                "keys": [
+                    "hobbies.entertainment",
+                    "hobbies.entertainmentItem1",
+                    "hobbies.entertainmentItem2",
+                    "hobbies.entertainmentItem3",
+                    "hobbies.entertainmentItem3Sub1",
+                    "hobbies.entertainmentItem3Sub2",
+                    "hobbies.entertainmentItem3Sub3"
+                ]
+            },
+            {
+                "id": "actividades-aire-libre",
+                "title": "hobbies.outdoorActivities",
+                "keys": [
+                    "hobbies.outdoorActivities",
+                    "hobbies.outdoorActivitiesItem1",
+                    "hobbies.outdoorActivitiesItem2"
+                ]
+            },
+            {
+                "id": "musica",
+                "title": "hobbies.music",
+                "keys": [
+                    "hobbies.music",
+                    "hobbies.musicDescription",
+                    "hobbies.musicFavorite",
+                    "hobbies.musicFavorite1",
+                    "hobbies.musicFavorite2",
+                    "hobbies.musicFavorite3",
+                    "hobbies.musicFavorite4",
+                    "hobbies.musicFavorite5"
+                ]
+            },
+            {
+                "id": "otras-actividades",
+                "title": "hobbies.otherActivities",
+                "keys": [
+                    "hobbies.otherActivities",
+                    "hobbies.videoDescription"
+                ]
+            }
+        ]
+    },
+    "proyectos.html": {
+        "title": "nav.projects",
+        "sections": [
+            {
+                "id": "compi-comida",
+                "title": "projects.project1Title",
+                "keys": [
+                    "projects.project1Title",
+                    "projects.project1Description"
+                ]
+            },
+            {
+                "id": "electron-forge-template",
+                "title": "projects.project2Title",
+                "keys": [
+                    "projects.project2Title",
+                    "projects.project2Description"
+                ]
+            },
+            {
+                "id": "know-and-win",
+                "title": "projects.project3Title",
+                "keys": [
+                    "projects.project3Title",
+                    "projects.project3Description"
+                ]
+            },
+            {
+                "id": "terraform-serverless-api",
+                "title": "projects.project4Title",
+                "keys": [
+                    "projects.project4Title",
+                    "projects.project4Description"
+                ]
+            },
+            {
+                "id": "slate",
+                "title": "projects.project5Title",
+                "keys": [
+                    "projects.project5Title",
+                    "projects.project5Description"
+                ]
+            }
+        ]
+    },
+    "ayuda.html": {
+        "title": "help.title",
+        "sections": [
+            {
+                "id": "inicio",
+                "title": "help.homeTitle",
+                "keys": [
+                    "help.homeTitle",
+                    "help.homeDescription"
+                ]
+            },
+            {
+                "id": "sobre-mi-help",
+                "title": "help.aboutTitle",
+                "keys": [
+                    "help.aboutTitle",
+                    "help.aboutDescription"
+                ]
+            },
+            {
+                "id": "aficiones-help",
+                "title": "help.hobbiesTitle",
+                "keys": [
+                    "help.hobbiesTitle",
+                    "help.hobbiesDescription"
+                ]
+            },
+            {
+                "id": "proyectos-help",
+                "title": "help.projectsTitle",
+                "keys": [
+                    "help.projectsTitle",
+                    "help.projectsDescription"
+                ]
+            }
+        ]
+    }
+}

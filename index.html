@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/index-layout.css">
+    <link rel="stylesheet" href="./styles/i18n.css">
+    <link rel="stylesheet" href="./styles/search.css">
     <link rel="icon" href="multimedia/img/favicon.ico">
     <meta name="keywords" content="Raúl Mera Soto">
-    <script src="js/time.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/time.js" defer></script>
+    <script src="js/search.js" defer></script>
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -25,11 +29,20 @@
 <body>
     <header>
         <h1><a href="index.html">Raúl Mera Soto</a></h1>
-        <nav aria-label="Navegación principal">
-            <a href="sobre-mi.html">Sobre Mí</a>
-            <a href="aficiones.html">Aficiones</a>
-            <a href="proyectos.html">Proyectos</a>
+        <nav data-i18n-aria="aria.mainNav" aria-label="Navegación principal">
+            <a href="index.html" aria-current="page" data-i18n="nav.home">Inicio</a>
+            <a href="sobre-mi.html" data-i18n="nav.about">Sobre Mí</a>
+            <a href="aficiones.html" data-i18n="nav.hobbies">Aficiones</a>
+            <a href="proyectos.html" data-i18n="nav.projects">Proyectos</a>
+            <a href="ayuda.html" data-i18n="nav.help">Ayuda</a>
         </nav>
+        <form role="search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <input type="search" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.ariaLabel">
+        </form>
     </header>
     <main>
         <picture>
@@ -38,40 +51,44 @@
             <source media="(min-width: 800px)" srcset="multimedia/img/retrato300.jpg">
             <img src="multimedia/img/retrato300.jpg" alt="Raúl Mera Soto">
         </picture>
-
-        <article>
-            <h3>Contacto</h3>
+        <article id="contacto">
+            <h3 data-i18n="index.contact">Contacto</h3>
             <p>Raúl Mera Soto</p>
             <p>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path
                         d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
                 <a href="mailto:UO287827@uniovi.es">UO287827@uniovi.es</a>
             </p>
 
-            <h3>Redes Sociales</h3>
+            <h3 id="redes-sociales" data-i18n="index.socialNetworks">Redes Sociales</h3>
             <p>
                 <a href="https://github.com/Raulms29" aria-label="GitHub">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
                             d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
                     </svg>
-                    <span>GitHub</span>
+                    <span data-i18n="aboutMe.github">GitHub</span>
                 </a>
                 <a href="https://www.linkedin.com/in/ra%C3%BAl-mera-soto/" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
                             d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
-                    <span>LinkedIn</span>
+                    <span data-i18n="aboutMe.linkedin">LinkedIn</span>
                 </a>
             </p>
         </article>
     </main>
 
     <footer>
-        <p>© 2025 Raúl Mera Soto</p>
+        <p data-i18n="footer.copyright">© 2025 Raúl Mera Soto</p>
+        <p><a href="sitemap.html" data-i18n="sitemap.title">Mapa del Sitio</a></p>
+        <select id="language-select" name="language">
+            <option value="es" data-i18n="footer.langEs">Español</option>
+            <option value="en" data-i18n="footer.langEn">English</option>
+        </select>
     </footer>
 </body>
 

@@ -1,0 +1,19 @@
+/* Especificidad: 012 */
+footer select[name="language"] {
+    background-color: var(--color-background);
+    border: 2px solid var(--color-border);
+    color: var(--color-text);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+/* Especificidad: 022 */
+footer select[name="language"]:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-hover);
+}

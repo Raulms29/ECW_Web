@@ -1,0 +1,245 @@
+/* Especificidad: 002 */
+header>form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    position: relative;
+}
+
+/* Icono de búsqueda */
+/* Especificidad: 003 */
+header>form>svg {
+    position: absolute;
+    left: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: var(--color-text-light);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Input de búsqueda */
+/* Especificidad: 013 */
+header>form>input[type="search"] {
+    padding: 0.5rem 1rem 0.5rem 2.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-width: 250px;
+    width: 100%;
+}
+
+/* Especificidad: 023 */
+header>form>input[type="search"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-hover);
+}
+
+/* Cambiar color del icono cuando el input está enfocado */
+/* Especificidad: 024 */
+header>form:has(input[type="search"]:focus)>svg {
+    fill: var(--color-primary);
+}
+
+/* Especificidad: 001 */
+mark {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+    font-weight: 500;
+}
+
+/* Elemento enfocado tras búsqueda */
+/* Especificidad: 010 */
+[data-search-focus] {
+    animation: focusPulse 0.5s ease-in-out;
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: 0.5rem;
+}
+
+/* Animación de pulso para elemento enfocado */
+
+
+/* Mensaje de resultados */
+/* Especificidad: 013 */
+header>div>div[data-search-message] {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Dropdown de sugerencias */
+/* Especificidad: 010 */
+[data-search-suggestions] {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-border);
+    border-radius: 0.75rem;
+    min-width: 400px;
+    max-width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Sugerencia individual */
+/* Especificidad: 011 */
+[data-search-suggestions]>a {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.2s ease;
+}
+
+/* Especificidad: 021 */
+[data-search-suggestions]>a:last-child {
+    border-bottom: none;
+}
+
+/* Especificidad: 021 */
+[data-search-suggestions]>a:hover {
+    background-color: var(--color-hover);
+}
+
+/* Icono de la sugerencia */
+/* Especificidad: 012 */
+[data-search-suggestions]>a>svg {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    fill: var(--color-primary);
+}
+
+/* Contenido de la sugerencia */
+/* Especificidad: 012 */
+[data-search-suggestions]>a>span {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Etiqueta de página */
+/* Especificidad: 012 */
+[data-search-suggestions]>a>small {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    background-color: var(--color-hover);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-top: 0.2rem;
+}
+
+/* Strong dentro de sugerencias */
+/* Especificidad: 013 */
+[data-search-suggestions]>a>span>strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Resaltado en sugerencias */
+/* Especificidad: 011 */
+[data-search-suggestions] mark {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+}
+
+/* Mensaje sin resultados */
+/* Especificidad: 021 */
+[data-search-suggestions]>p[data-no-results] {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Responsive: adaptar búsqueda en pantallas pequeñas */
+@media screen and (max-width: 1200px) {
+
+    /* Especificidad: 002 */
+    header>form {
+        width: 100%;
+        justify-content: center;
+        /* Redefinición de margin-left */
+        margin-left: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Especificidad: 013 */
+    header>form>input[type="search"] {
+        max-width: 375px;
+    }
+
+    /* Especificidad: 003 */
+    header>form>svg {
+        /* Redefinición de left */
+        left: calc(50% - 187.5px + 1rem);
+    }
+
+    /* Especificidad: 010 */
+    [data-search-suggestions] {
+        /* Redefinición de left */
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(95%, 400px);
+        /* Redefinición de min-width */
+        min-width: auto;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes focusPulse {
+
+    0%,
+    100% {
+        outline-color: var(--color-primary);
+        outline-offset: 4px;
+    }
+
+    50% {
+        outline-color: var(--color-primary-dark);
+        outline-offset: 8px;
+    }
+}

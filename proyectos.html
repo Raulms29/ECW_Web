@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/i18n.css">
+    <link rel="stylesheet" href="./styles/search.css">
     <link rel="icon" href="multimedia/img/favicon.ico">
     <meta name="keywords" content="Proyecto, Raúl Mera Soto">
-    <script src="js/time.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/time.js" defer></script>
+    <script src="js/search.js" defer></script>
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -26,25 +30,42 @@
 <body>
     <header>
         <h1><a href="index.html">Raúl Mera Soto</a></h1>
-        <nav aria-label="Navegación principal">
-            <a href="sobre-mi.html">Sobre Mí</a>
-            <a href="aficiones.html">Aficiones</a>
-            <a href="proyectos.html" aria-current="page">Proyectos</a>
+        <nav data-i18n-aria="aria.mainNav" aria-label="Navegación principal">
+            <a href="index.html" data-i18n="nav.home">Inicio</a>
+            <a href="sobre-mi.html" data-i18n="nav.about">Sobre Mí</a>
+            <a href="aficiones.html" data-i18n="nav.hobbies">Aficiones</a>
+            <a href="proyectos.html" aria-current="page" data-i18n="nav.projects">Proyectos</a>
+            <a href="ayuda.html" data-i18n="nav.help">Ayuda</a>
         </nav>
+        <form role="search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <input type="search" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.ariaLabel">
+        </form>
     </header>
+    <nav aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li aria-current="page" data-i18n="nav.projects">Proyectos</li>
+        </ol>
+    </nav>
     <main>
-        <h2>Mis Proyectos</h2>
-        <p>Aquí puedes encontrar información sobre algunos de los proyectos que realicé durante el Grado.</p>
+        <h2 data-i18n="projects.heading">Proyectos</h2>
+        <p data-i18n="projects.description">Estos son algunos de los proyectos de desarrollo de software que he
+            realizado durante mi formación universitaria y profesional.</p>
 
         <!-- div utilizado únicamente para propósitos de diseño (layout) -->
         <div>
             <section>
                 <img src="multimedia/img/projects/compi-comida.png" alt="Compi Comida">
-                <h3>Compi Comida</h3>
-                <p>Una aplicación móvil para gestionar tu despensa y lista de la compra de forma eficiente.</p>
+                <h3 data-i18n="projects.project1Title">Compi Comida</h3>
+                <p data-i18n="projects.project1Description">Una aplicación móvil para gestionar tu despensa y lista de
+                    la compra de forma eficiente.</p>
                 <a href="https://github.com/didierrc/CompiComida" target="_blank" rel="noopener noreferrer">
-                    Ver en GitHub
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <span data-i18n="projects.viewOnGithub">Ver en GitHub</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
                             d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z" />
                     </svg>
@@ -53,11 +74,13 @@
 
             <section>
                 <img src="multimedia/img/projects/electron-forge.svg" alt="electron-forge-template">
-                <h3>electron-forge-template</h3>
-                <p>Una plantilla para crear proyectos con electron-forge y Vue.js de manera rápida y sencilla.</p>
+
+                <h3 data-i18n="projects.project2Title">electron-forge-template</h3>
+                <p data-i18n="projects.project2Description">Una plantilla para crear proyectos con electron-forge y
+                    Vue.js de manera rápida y sencilla.</p>
                 <a href="https://github.com/Raulms29/electron-forge-template" target="_blank" rel="noopener noreferrer">
-                    Ver en GitHub
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <span data-i18n="projects.viewOnGithub">Ver en GitHub</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
                             d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z" />
                     </svg>
@@ -66,12 +89,12 @@
 
             <section>
                 <img src="multimedia/img/projects/kaw.png" alt="Know and Win (KAW)">
-                <h3>Know and Win (KAW)</h3>
-                <p>Proyecto realizado en la asignatura de Arquitectura del grado. Una aplicación de preguntas y
-                    respuestas.</p>
+                <h3 data-i18n="projects.project3Title">Know and Win (KAW)</h3>
+                <p data-i18n="projects.project3Description">Proyecto realizado en la asignatura de Arquitectura del
+                    grado. Una aplicación de preguntas y respuestas.</p>
                 <a href="https://github.com/Arquisoft/wiq_en3b" target="_blank" rel="noopener noreferrer">
-                    Ver en GitHub
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <span data-i18n="projects.viewOnGithub">Ver en GitHub</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
                             d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z" />
                     </svg>
@@ -80,12 +103,12 @@
 
             <section>
                 <img src="multimedia/img/projects/terraform.svg" alt="terraform-serverless-api">
-                <h3>terraform-serverless-api</h3>
-                <p>Un proyecto para la asignatura de Administración de Sistemas y Redes del grado utilizando Terraform.
-                </p>
+                <h3 data-i18n="projects.project4Title">terraform-serverless-api</h3>
+                <p data-i18n="projects.project4Description">Un proyecto para la asignatura de Administración de Sistemas
+                    y Redes del grado utilizando Terraform.</p>
                 <a href="https://github.com/didierrc/terraform-serverless-api" target="_blank"
                     rel="noopener noreferrer">
-                    Ver en GitHub
+                    <span data-i18n="projects.viewOnGithub">Ver en GitHub</span>
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z" />
@@ -95,11 +118,11 @@
 
             <section>
                 <img src="multimedia/img/projects/slate.png" alt="Slate Note App">
-                <h3>Slate</h3>
-                <p>Aplicación de escritorio multiplataforma para tomar notas y organizar pensamientos. Desarrollada como
-                    Trabajo Fin de Grado con Electron, Vue 3 y TypeScript.</p>
+                <h3 data-i18n="projects.project5Title">Slate</h3>
+                <p data-i18n="projects.project5Description">Aplicación de escritorio multiplataforma para tomar notas y
+                    organizar pensamientos. Desarrollada como Trabajo Fin de Grado con Electron, Vue 3 y TypeScript.</p>
                 <a href="https://github.com/Raulms29/Slate-Note-App" target="_blank" rel="noopener noreferrer">
-                    Ver en GitHub
+                    <span data-i18n="projects.viewOnGithub">Ver en GitHub</span>
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7z" />
@@ -110,7 +133,12 @@
     </main>
 
     <footer>
-        <p>© 2025 Raúl Mera Soto</p>
+        <p data-i18n="footer.copyright">© 2025 Raúl Mera Soto</p>
+        <p><a href="sitemap.html" data-i18n="sitemap.title">Mapa del Sitio</a></p>
+        <select id="language-select" name="language">
+            <option value="es" data-i18n="footer.langEs">Español</option>
+            <option value="en" data-i18n="footer.langEn">English</option>
+        </select>
     </footer>
 </body>
 

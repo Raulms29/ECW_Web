@@ -18,18 +18,19 @@ class Clock {
         }
 
         const footer = document.querySelector('footer');
-        let paragraphs = footer.querySelectorAll('p');
-        let clockElem;
+        let clockElem = footer.querySelector('p[data-time="true"]');
 
-        if (paragraphs.length < 3) {
+        if (!clockElem) {
             clockElem = document.createElement('p');
+            clockElem.dataset.time = 'true';
             footer.appendChild(clockElem);
-        } else {
-            clockElem = paragraphs[2];
         }
 
-        if (clockElem.textContent !== timeString) {
-            clockElem.textContent = timeString;
+        const label = window.i18n.getTranslation('footer.time');
+        const fullTimeString = `${label} ${timeString}`;
+
+        if (clockElem.textContent !== fullTimeString) {
+            clockElem.textContent = fullTimeString;
         }
     }
 
@@ -37,20 +38,45 @@ class Clock {
         const footer = document.querySelector('footer');
         const lastModifiedElem = document.createElement('p');
         const lastModified = new Date(document.lastModified);
-        const formattedDate = lastModified.toLocaleDateString(navigator.language, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+        // Usar toLocaleDateString para dd/mm/aaaa
+        const formattedDate = lastModified.toLocaleDateString('es-ES', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
         });
-        lastModifiedElem.textContent = `Última actualización: ${formattedDate}`;
+
+        // Store the date so we can update the label when language changes
+        lastModifiedElem.dataset.date = formattedDate;
+        lastModifiedElem.dataset.lastModified = 'true';
+
+        // Get translation from i18n
+        const label = window.i18n.getTranslation('footer.lastUpdate');
+        lastModifiedElem.textContent = `${label} ${formattedDate}`;
         footer.appendChild(lastModifiedElem);
     }
 
-    init() {
-        window.addEventListener('DOMContentLoaded', () => {
-            this.addLastModified();
-            this.updateClock();
-            setInterval(() => this.updateClock(), 100);
+    updateLastModifiedLabel() {
+        const lastModifiedElem = document.querySelector('p[data-last-modified="true"]');
+        if (lastModifiedElem) {
+            const date = lastModifiedElem.dataset.date;
+            const label = window.i18n.getTranslation('footer.lastUpdate');
+            lastModifiedElem.textContent = `${label} ${date}`;
+        }
+    }
+
+    async init() {
+        // Esperar a que i18n esté completamente cargado
+        await window.i18n.ready;
+
+        // With defer, DOM and i18n are ready when this executes
+        this.addLastModified();
+        this.updateClock();
+        setInterval(() => this.updateClock(), 1000);
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', () => {
+            this.updateLastModifiedLabel();
+            this.updateClock(); // Actualizar también la etiqueta del reloj
         });
     }
 }

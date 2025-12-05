@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raúl Mera Soto">
+    <meta name="description" content="Página de ayuda de Raúl Mera Soto.">
+    <title>Raúl Mera Soto - Ayuda</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/i18n.css">
+    <link rel="stylesheet" href="./styles/search.css">
+    <link rel="icon" href="multimedia/img/favicon.ico">
+    <meta name="keywords" content="Ayuda">
+    <script src="js/i18n.js" defer></script>
+    <script src="js/time.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script>
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "ufuj5vo5mp");
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Raúl Mera Soto</a></h1>
+        <nav data-i18n-aria="aria.mainNav" aria-label="Navegación principal">
+            <a href="index.html" data-i18n="nav.home">Inicio</a>
+            <a href="sobre-mi.html" data-i18n="nav.about">Sobre Mí</a>
+            <a href="aficiones.html" data-i18n="nav.hobbies">Aficiones</a>
+            <a href="proyectos.html" data-i18n="nav.projects">Proyectos</a>
+            <a href="ayuda.html" aria-current="page" data-i18n="nav.help">Ayuda</a>
+        </nav>
+        <form role="search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <input type="search" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.ariaLabel">
+        </form>
+    </header>
+    <nav aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li aria-current="page" data-i18n="nav.help">Ayuda</li>
+        </ol>
+    </nav>
+    <main>
+        <h2 data-i18n="help.title">Ayuda</h2>
+
+        <h3 data-i18n="help.homeTitle">Inicio</h3>
+        <p data-i18n="help.homeDescription">La página de inicio muestra información de contacto y enlaces a mis perfiles
+            en redes sociales.</p>
+
+        <h3 data-i18n="help.aboutTitle">Sobre Mí</h3>
+        <p data-i18n="help.aboutDescription">Contiene información personal, detalles de formación académica y
+            experiencia profesional.</p>
+
+        <h3 data-i18n="help.hobbiesTitle">Aficiones</h3>
+        <p data-i18n="help.hobbiesDescription">Lista mis intereses, pasatiempos, actividades al aire libre y música
+            favorita.</p>
+
+        <h3 data-i18n="help.projectsTitle">Proyectos</h3>
+        <p data-i18n="help.projectsDescription">Recoge descripciones y enlaces a los proyectos que he desarrollado
+            durante mis estudios y prácticas.</p>
+
+    </main>
+
+    <footer>
+        <p data-i18n="footer.copyright">© 2025 Raúl Mera Soto</p>
+        <p><a href="sitemap.html" data-i18n="sitemap.title">Mapa del Sitio</a></p>
+        <select id="language-select" name="language">
+            <option value="es" data-i18n="footer.langEs">Español</option>
+            <option value="en" data-i18n="footer.langEn">English</option>
+        </select>
+    </footer>
+</body>
+
+</html>

@@ -10,9 +10,13 @@
     <title>Raúl Mera Soto - Aficiones</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/i18n.css">
+    <link rel="stylesheet" href="./styles/search.css">
     <link rel="icon" href="multimedia/img/favicon.ico">
     <meta name="keywords" content="Afición, Raúl Mera Soto">
-    <script src="js/time.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/time.js" defer></script>
+    <script src="js/search.js" defer></script>
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -25,61 +29,76 @@
 <body>
     <header>
         <h1><a href="index.html">Raúl Mera Soto</a></h1>
-        <nav aria-label="Navegación principal">
-            <a href="sobre-mi.html">Sobre Mí</a>
-            <a href="aficiones.html" aria-current="page">Aficiones</a>
-            <a href="proyectos.html">Proyectos</a>
+        <nav data-i18n-aria="aria.mainNav" aria-label="Navegación principal">
+            <a href="index.html" data-i18n="nav.home">Inicio</a>
+            <a href="sobre-mi.html" data-i18n="nav.about">Sobre Mí</a>
+            <a href="aficiones.html" aria-current="page" data-i18n="nav.hobbies">Aficiones</a>
+            <a href="proyectos.html" data-i18n="nav.projects">Proyectos</a>
+            <a href="ayuda.html" data-i18n="nav.help">Ayuda</a>
         </nav>
+        <form role="search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <input type="search" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.ariaLabel">
+        </form>
     </header>
+    <nav aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li aria-current="page" data-i18n="nav.hobbies">Aficiones</li>
+        </ol>
+    </nav>
     <main>
-        <h2>Aficiones</h2>
+        <h2 data-i18n="hobbies.heading">Aficiones</h2>
 
-        <section>
-            <h3>Entretenimiento</h3>
+        <section id="entretenimiento">
+            <h3 data-i18n="hobbies.entertainment">Entretenimiento</h3>
             <ul>
-                <li>Cine y series de televisión</li>
-                <li>Fútbol</li>
-                <li>Videojuegos favoritos:
+                <li data-i18n="hobbies.entertainmentItem1">Cine y series de televisión</li>
+                <li data-i18n="hobbies.entertainmentItem2">Fútbol</li>
+                <li data-i18n="hobbies.entertainmentItem3">Videojuegos favoritos:
                     <ul>
-                        <li>Red Dead Redemption 2</li>
-                        <li>Hollow Knight: Silksong</li>
-                        <li>Celeste</li>
+                        <li data-i18n="hobbies.entertainmentItem3Sub1">Red Dead Redemption 2</li>
+                        <li data-i18n="hobbies.entertainmentItem3Sub2">Hollow Knight: Silksong</li>
+                        <li data-i18n="hobbies.entertainmentItem3Sub3">Celeste</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h3>Actividades al Aire Libre</h3>
+        <section id="actividades-aire-libre">
+            <h3 data-i18n="hobbies.outdoorActivities">Actividades al Aire Libre</h3>
             <ul>
-                <li>Senderismo</li>
-                <li>Pesca</li>
+                <li data-i18n="hobbies.outdoorActivitiesItem1">Senderismo</li>
+                <li data-i18n="hobbies.outdoorActivitiesItem2">Pesca</li>
             </ul>
         </section>
 
-        <section>
-            <h3>Música</h3>
-            <p>Banda sonora del videojuego Celeste</p>
+        <section id="musica">
+            <h3 data-i18n="hobbies.music">Música</h3>
+            <p data-i18n="hobbies.musicDescription">Banda sonora del videojuego Celeste</p>
             <audio controls>
                 <source src="multimedia/audio/celeste_soundtrack_03_resurrections.mp3" type="audio/mpeg">
                 <source src="multimedia/audio/celeste_soundtrack_03_resurrections.wav" type="audio/wav">
             </audio>
 
-            <p>Grupos y Cantantes Favoritos</p>
+            <p data-i18n="hobbies.musicFavorite">Grupos y Cantantes Favoritos</p>
             <ol>
-                <li>Imagine Dragons</li>
-                <li>Pablo Alborán</li>
-                <li>Stromae</li>
-                <li>Lukas Graham</li>
-                <li>Avicii</li>
+                <li data-i18n="hobbies.musicFavorite1">Imagine Dragons</li>
+                <li data-i18n="hobbies.musicFavorite2">Pablo Alborán</li>
+                <li data-i18n="hobbies.musicFavorite3">Stromae</li>
+                <li data-i18n="hobbies.musicFavorite4">Lukas Graham</li>
+                <li data-i18n="hobbies.musicFavorite5">Avicii</li>
             </ol>
         </section>
 
-        <section>
-            <h3>Otras Actividades</h3>
-            <p>Una reacción de precipitación que realicé en el instituto. En ella reaccionan yoduro de potasio y nitrato
-                de plomo para formar nitrato de potasio y yoduro de plomo, siendo el segundo el que le da su
-                característico color al compuesto resultante.</p>
+        <section id="otras-actividades">
+            <h3 data-i18n="hobbies.otherActivities">Otras Actividades</h3>
+            <p data-i18n="hobbies.videoDescription">Una reacción de precipitación que realicé en el instituto. En ella
+                reaccionan yoduro de potasio y nitrato de plomo para formar nitrato de potasio y yoduro de plomo, siendo
+                el segundo el que le da su característico color al compuesto resultante.</p>
 
             <video controls preload="auto">
                 <source src="multimedia/video/reaccion_precipitacion.mp4" type="video/mp4">
@@ -89,7 +108,12 @@
     </main>
 
     <footer>
-        <p>© 2025 Raúl Mera Soto</p>
+        <p data-i18n="footer.copyright">© 2025 Raúl Mera Soto</p>
+        <p><a href="sitemap.html" data-i18n="sitemap.title">Mapa del Sitio</a></p>
+        <select id="language-select" name="language">
+            <option value="es" data-i18n="footer.langEs">Español</option>
+            <option value="en" data-i18n="footer.langEn">English</option>
+        </select>
     </footer>
 </body>
 
