@@ -126,7 +126,7 @@ body>header nav a:visited {
     color: var(--color-text-light);
 }
 
-/* Especificidad: 004 */
+/* Especificidad: 014 */
 body>header nav a:hover {
     /* Hereda background-color de header */
     background-color: var(--color-hover);
@@ -134,7 +134,7 @@ body>header nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Especificidad: 004 */
+/* Especificidad: 014 */
 body>header nav a[aria-current="page"] {
     /* Hereda background-color de header */
     color: var(--color-primary);
@@ -148,13 +148,13 @@ a {
     transition: color 0.2s ease;
 }
 
-/* Especificidad: 001 */
+/* Especificidad: 011 */
 a:visited {
     /* Hereda background-color de body */
     color: var(--color-text-light);
 }
 
-/* Especificidad: 001 */
+/* Especificidad: 011 */
 a:hover {
     /* Hereda background-color de body */
     color: var(--color-primary);
@@ -223,7 +223,7 @@ main>article>p {
     gap: 0.5rem;
 }
 
-/* Especificidad: 002 */
+/* Especificidad: 003 */
 main>h3+p {
     display: flex;
     align-items: center;
@@ -273,12 +273,12 @@ main>section>p a svg {
 }
 
 /* Estilos para migas de pan */
-/* Especificidad: 011 */
+/* Especificidad: 012 */
 body>nav[aria-label="Migas de pan"] {
     margin: 0.5rem;
 }
 
-/* Especificidad: 012 */
+/* Especificidad: 003 */
 body>nav ol {
     list-style: none;
     padding: 0;
@@ -288,7 +288,7 @@ body>nav ol {
     font-size: 0.9rem;
 }
 
-/* Especificidad: 013 */
+/* Especificidad: 015 */
 body>nav ol li:not(:last-child)::after {
     content: "›";
     margin-left: 0.5rem;
@@ -296,14 +296,28 @@ body>nav ol li:not(:last-child)::after {
     color: var(--color-text-light);
 }
 
-/* Especificidad: 014 */
+/* Especificidad: 005 */
 body>nav ol li a {
     /* Hereda background-color de body */
     color: var(--color-primary);
     text-decoration: none;
 }
 
-/* Especificidad: 014 */
+/* Especificidad: 015 */
 body>nav ol li a:hover {
     text-decoration: underline;
+}
+
+/* Especificidad: 002 */
+footer>label,
+/* Especificidad: 012 */
+form[role="search"]>label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-width: 0;
 }

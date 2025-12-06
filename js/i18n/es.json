@@ -93,7 +93,9 @@
     "time": "Hora:",
     "langSelect": "Seleccionar idioma",
     "langEs": "Español",
-    "langEn": "Inglés"
+    "langEn": "Inglés",
+    "searchLabel": "Buscar",
+    "languageLabel": "Seleccionar idioma"
   },
   "help": {
     "title": "Raúl Mera Soto - Ayuda",
