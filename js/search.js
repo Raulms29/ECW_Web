@@ -166,16 +166,12 @@ class Search {
                         if (end < text.length) snippet = snippet + '...';
 
                         matchedText = snippet;
-                        break;
+                        matches.push({
+                            text: matchedText,
+                            context: this.getText(section.title),
+                            id: section.id
+                        });
                     }
-                }
-
-                if (matchedText) {
-                    matches.push({
-                        text: matchedText,
-                        context: this.getText(section.title),
-                        id: section.id
-                    });
                 }
             }
 
