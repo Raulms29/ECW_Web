@@ -194,7 +194,7 @@ class Search {
         return String(value);
     }
 
-    showSuggestions(query, currentResults, otherResults) {
+    showSuggestions(currentResults, otherResults) {
         this.hideSuggestions();
 
         // Si no hay resultados en ningún sitio, mostramos un mensaje de "no hay resultados"
