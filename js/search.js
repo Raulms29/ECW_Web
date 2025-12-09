@@ -150,7 +150,7 @@ class Search {
 
             for (const section of data.sections) {
                 // Cada sección tiene una lista de claves (paths en el objeto de traducciones)
-                let matchedText = '';
+                const sectionMatches = [];
                 for (const key of section.keys) {
                     const text = this.getText(key);
                     const normalizedText = this.normalize(text);
@@ -165,18 +165,18 @@ class Search {
                         if (start > 0) snippet = '...' + snippet;
                         if (end < text.length) snippet = snippet + '...';
 
-                        matchedText = snippet;
-                        matches.push({
-                            text: matchedText,
+                        sectionMatches.push({
+                            text: snippet,
                             context: this.getText(section.title),
                             id: section.id
                         });
                     }
                 }
+                matches.push(...sectionMatches);
             }
 
             if (matches.length > 0) {
-                results.push({ page, title: pageTitle, matches: matches.slice(0, 2) });
+                results.push({ page, title: pageTitle, matches: matches.slice(0, 4) });
             }
         }
 
