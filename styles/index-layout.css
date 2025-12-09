@@ -24,6 +24,7 @@ main>article {
 
 /* Especificidad 003 */
 main>article>p {
+    /* Redefinicion de display */
     display: flex;
     flex-wrap: wrap;
 }
@@ -40,6 +41,7 @@ main>article>p a[aria-label] {
     align-items: center;
     gap: 0.5rem;
     /* CSS variable: no comprobación estática */
+    /* Hereda background-color de body */
     color: var(--color-text-light);
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
     padding: 0.5rem;

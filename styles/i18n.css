@@ -15,5 +15,6 @@ footer select[name="language"] {
 /* Especificidad: 022 */
 footer select[name="language"]:hover {
     border-color: var(--color-primary);
+    /* Hereda color de body */
     background-color: var(--color-hover);
 }
