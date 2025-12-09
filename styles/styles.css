@@ -308,10 +308,13 @@ body>nav ol li a:hover {
     text-decoration: underline;
 }
 
+/* Ocultar visualmente pero mantener accesibilidad */
 /* Especificidad: 002 */
 footer>label,
 /* Especificidad: 012 */
-form[role="search"]>label {
+form[role="search"]>label,
+/* Especificidad: 022 */
+form[role="search"] button[type="submit"] {
     position: absolute;
     width: 1px;
     height: 1px;
